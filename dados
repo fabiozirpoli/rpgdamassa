@@ -9,7 +9,7 @@ dado=10
 echo "Qual valor que voce tirou?"
 read valor
 
-/root/ded/alldices/$dado $valor
+./alldices/$dado $valor
 
 echo -n  "Você (A)certou, (C)ritou, (E)rrou ou (F)alhou críticamente? Responda somente a primeira letra da opção correta. [A] "
 read resposta
