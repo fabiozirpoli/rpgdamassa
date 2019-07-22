@@ -4,12 +4,12 @@ echo "Dados disponiveis: d3, d4, d6, d8, d10, d12, d20, d100"
 echo "Diga qual dado voce esta jogando:"
 read dado
 
-
-dado=10
 echo "Qual valor que voce tirou?"
 read valor
 
-./alldices/$dado $valor
+dado=`echo $dado | sed 's/d//g'`
+
+./dice $valor $dado
 
 echo -n  "Você (A)certou, (C)ritou, (E)rrou ou (F)alhou críticamente? Responda somente a primeira letra da opção correta. [A] "
 read resposta
