@@ -1,0 +1,31 @@
+#!/bin/bash
+
+echo "Dados disponiveis: d3, d4, d6, d8, d10, d12, d20, d100"
+echo "Diga qual dado voce esta jogando:"
+read dado
+
+echo "Qual valor que voce tirou?"
+read valor
+
+/root/ded/alldices/$dado $valor
+
+echo -n  "Você (A)certou, (C)ritou, (E)rrou ou (F)alhou críticamente? Responda somente a primeira letra da opção correta. [A] "
+read resposta
+
+case "$resposta" in
+
+        a|A|"")
+                echo "Role seus dados de dano"
+        ;;
+        c|C)
+                echo "Role seus dados de dano e dobre o valor"
+        ;;
+        f|F)
+                echo "Implore perdão ao mestre"
+        ;;
+        e|E)
+                echo "Você simplesmente errou o alvo"
+        ;;
+        *)
+                echo "Resposta inválida"
+esac
