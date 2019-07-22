@@ -1,0 +1,17 @@
+#!/bin/bash
+
+
+
+if [ "$1" -gt $2 ]
+        then
+        echo "Valor invalido..."
+else
+        if [ "$1" -eq $2 ]
+                then
+                        echo "Voce critou!"
+                elif [ "$1" -gt $2 ] && [ "$1" -lt $2 ] ; then
+                        echo "Voce acertou $1 no dado, some seus acerto e cheque a AC do oponente "
+                else
+                        echo "Voce teve uma falha crítica!"
+        fi
+fi
